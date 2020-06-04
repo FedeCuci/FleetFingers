@@ -27,6 +27,6 @@ filename = '-'.join(combinations)
 
 with open('files/{}.txt'.format(filename), 'w') as file:
     for i in final_combinations.values():
-        i = i.shuffle()
+        random.shuffle(i) 
         del i[99:-1]
         file.write(' '.join(i) + '\n')
